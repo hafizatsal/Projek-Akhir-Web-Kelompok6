@@ -28,4 +28,5 @@ class Home extends BaseController
     {
         return view('form_daftar');
     }
+  
 }
