@@ -14,7 +14,7 @@
             Form Pendaftaran Pasien
           </div>
           <div class="card-body">
-            <form action="proses-pendaftaran.php" method="post" class="mt-4">
+            <form action="<?= base_url('/home_pasien/pasien_daftar')?>" method="POST">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="nama" class="col-form-label">Nama Lengkap</label>
@@ -51,7 +51,8 @@
                   <label for="keluhan" class="col-form-label">Keluhan</label>
                   <textarea name="keluhan" id="keluhan" class="form-control" rows="4"></textarea>
                 </div>
-                <div class="d-flex justify-content-center mt-5">
+              </div>
+              <div class="d-flex justify-content-center mt-5">
                 <button type="submit" class="btn btn-primary">Daftar</button>
               </div>
             </form>

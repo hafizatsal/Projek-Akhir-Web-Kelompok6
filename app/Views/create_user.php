@@ -6,7 +6,7 @@
 <body>
     <h2>Create User</h2>
 
-    <form action="<?= base_url('/user/store') ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?= base_url('/user/store')?>" method="POST" enctype="multipart/form-data">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required><br>
 

@@ -57,4 +57,8 @@ class UserModel extends Model
         return $this->delete($id);
 
     }
+
+    public function saveDaftar($dataDaftar) {
+        $this->insert($dataDaftar);
+    }
 }

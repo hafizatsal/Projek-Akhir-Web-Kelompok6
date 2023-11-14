@@ -10,6 +10,8 @@ $routes->get('/home_pasien', 'Home::beranda_pasien');
 $routes->get('/home_admin', 'Home::beranda_admin');
 $routes->get('/home_resepsionis', 'Home::beranda_resepsionis');
 $routes->get('/form_daftar', 'Home::form_daftar');
+$routes->get('/home_pasien/daftar', [UserController::class,'daftar']);
+$routes->post('/home_pasien/pasien_daftar', [UserController::class,'pasien_daftar']);
 
 $routes->get('/user/create', [UserController::class, 'create']);
 $routes->post('/user/store', [UserController::class, 'store']);
