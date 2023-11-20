@@ -44,28 +44,17 @@ class UserController extends BaseController
         return view('create_user');
     }
 
-    public function pasien_daftar()
-{
-    $dataDaftar = [
-        'nama' => $this->request->getVar('nama'),
-        'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
-        'tanggal_lahir' => $this->request->getVar('tanggal_lahir'),
+    public function store()
+    {    
+    $this->userModel->saveUser([
+        'username' => $this->request->getVar('username'),
+        'password' => $this->request->getVar('password'),
+        'nama_user' => $this->request->getVar('nama_user'),
+        'no_ktp' => $this->request->getVar('no_ktp'),
+        'no_tlp' => $this->request->getVar('no_tlp'),
         'alamat' => $this->request->getVar('alamat'),
-        'no_telp' => $this->request->getVar('no_telp'),
-        'asal_rujukan' => $this->request->getVar('asal_rujukan'),
-        'keluhan' => $this->request->getVar('keluhan'),
-    ];
-
-    // Simpan data ke database
-    $userModel = new UserModel();
-    $userModel->savePasien($dataDaftar);
-
-    // Redirect ke halaman beranda pasien
-    return view('/home_pasien', $dataDaftar);
-}
-
-public function daftar(){
-    return view('form_daftar');
+    ]);
+    return redirect()->to('/user');
 }
 
 public function show($id){
