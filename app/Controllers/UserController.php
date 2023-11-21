@@ -49,7 +49,7 @@ class UserController extends BaseController
     $dataDaftar = [
         'nama' => $this->request->getVar('nama'),
         'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
-        'tanggal_lahir' => $this->request->getVar('tanggal_lahir'),
+        'tanggal' => $this->request->getVar('tanggal_lahir'),
         'alamat' => $this->request->getVar('alamat'),
         'no_telp' => $this->request->getVar('no_telp'),
         'asal_rujukan' => $this->request->getVar('asal_rujukan'),
@@ -59,9 +59,10 @@ class UserController extends BaseController
     // Simpan data ke database
     $userModel = new UserModel();
     $userModel->savePasien($dataDaftar);
-
-    // Redirect ke halaman beranda pasien
-    return view('/home_pasien', $dataDaftar);
+    
+    // Redirect ke halaman beranda pasien 
+    dd($dataDaftar);
+    // return redirect ->('home_pasien', $dataDaftar);
 }
 
 public function daftar(){

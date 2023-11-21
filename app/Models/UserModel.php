@@ -61,4 +61,8 @@ class UserModel extends Model
     public function saveDaftar($dataDaftar) {
         $this->insert($dataDaftar);
     }
+
+    public function savePasien($dataDaftar) {
+        $this->insert($dataDaftar);
+    }
 }
