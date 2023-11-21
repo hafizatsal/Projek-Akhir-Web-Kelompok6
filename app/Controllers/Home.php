@@ -28,5 +28,15 @@ class Home extends BaseController
     {
         return view('form_daftar');
     }
+
+    public function jadwal()
+    {
+        return view('jadwal');
+    }
+
+    public function informasi()
+    {
+        return view('informasi_pasien');
+    }
   
 }
