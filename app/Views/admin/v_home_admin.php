@@ -26,10 +26,10 @@
     <link href="assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets')?>/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets')?>/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -83,108 +83,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="home_pasien" class="nav-item nav-link active">Home</a>
-                <a href="" class="nav-item nav-link">Jadwal Dokter</a>
-                <a href="" class="nav-item nav-link">Informasi Pasien</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan Resepsionis</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Pemesanan Janji Temu</a>
-                        <a href="team.html" class="dropdown-item">Pengambilan Resep</a>
-                        <a href="/home_pasien/daftar" class="dropdown-item">Konsultasi Online</a>
-                    </div>
+                <a href="" class="nav-item nav-link">Data Pasien</a>
+                <a href="" class="nav-item nav-link">Data Dokter</a>
+                <a href="" class="nav-item nav-link">Manajemen jadwal</a>
+                <a href="" class="nav-item nav-link">Laporan</a>
                 </div>
     </nav>
     <!-- Navbar End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Dokter</p>
-                <h1>Jadwal Dokter</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/team-1.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Dokter</h5>
-                            <p class="text-primary">Senin</p>
-                            <p class="text-primary">8.00-16.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/team-2.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Dokter</h5>
-                            <p calss="text-primary">Selasa</p>
-                            <p calss="text-primary">8.00-16.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/team-3.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Dokter</h5>
-                            <p calss="text-primary">Rabu</p>
-                            <p calss="text-primary">8.00-16.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/team-4.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Dokter</h5>
-                            <p calss="text-primary">Rabu</p>
-                            <p calss="text-primary">8.00-16.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="assets/img/about-1.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="assets/img/about-2.jpg" alt="" style="margin-top: -25%;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">Informasi Pasien</p>
-                    <h1 class="mb-4">informasi yang dimiliki pasien</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Informasi Pasien</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Layanan Resepsionis</p>
+                <p class="d-inline-block border rounded-pill py-1 px-4">Data Pasien</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -192,8 +103,8 @@
                         <!-- <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
                             <i class="fa fa-heartbeat text-primary fs-4"></i>
                         </div> -->
-                        <h4 class="mb-3">Pemesanan Janji Tamu</h4>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Lihat</a>
+                        <h4 class="mb-3">Lihat Data Pasien</h4>
+                        <a class="btn" href="<?php echo site_url ("admin/v_dashboard")?>"><i class="fa fa-plus text-primary me-3"></i>Lihat</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -201,16 +112,28 @@
                         <!-- <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
                             <i class="fa fa-x-ray text-primary fs-4"></i>
                         </div> -->
-                        <h4 class="mb-3">Pengambilan Resep</h4>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Lihat</a>
+                        <h4 class="mb-3">Edit Data Pasien</h4>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Edit</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+        <!-- Data Dokter -->
+        <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Data Dokter</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <!-- <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-brain text-primary fs-4"></i>
+                            <i class="fa fa-heartbeat text-primary fs-4"></i>
                         </div> -->
-                        <h4 class="mb-3">Konsultasi Online</h4>
+                        <h4 class="mb-3">Lihat Data Dokter</h4>
                         <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Lihat</a>
                     </div>
                 </div>
@@ -297,7 +220,7 @@
     <script src="assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js"></script>
+    <script src="<?php echo base_url('assets')?>/js/main.js"></script>
 </body>
 
 </html>
