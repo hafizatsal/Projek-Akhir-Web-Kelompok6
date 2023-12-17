@@ -15,20 +15,37 @@ class CreateTableJadwal extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'hari' => [
+            'senin' => [
                 'type' => 'VARCHAR',
-                'constraint' => 25,
-            ],
-            'jam_praktek' => [
-                'type' => 'TIME',
+                'constraint' => 255,
                 'null' => true,
             ],
-            'id_dokter' => [
-                'type' => 'INT',
-                'constraint' => 11,
-                'unsigned' => true,
+            'selasa' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
                 'null' => true,
             ],
+            'rabu' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
+            'kamis' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
+            'jumat' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
+            'sabtu' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
+            
             'created_at' => [
                 'type'  => 'DATETIME',
                 'null' => true,
@@ -44,7 +61,7 @@ class CreateTableJadwal extends Migration
         ]);
 
         $this->forge->addKey('id', true, true);
-        $this->forge->addForeignKey('id_dokter', 'dokter', 'id', 'CASCADE', 'CASCADE');
+        // $this->forge->addForeignKey('id_dokter', 'dokter', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('jadwal');  
     }
 

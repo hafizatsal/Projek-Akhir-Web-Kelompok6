@@ -18,15 +18,20 @@ class CreateTableUser extends Migration
             'username' => [
                 'type' => 'VARCHAR',
                 'constraint' => 20,
+                'unique' => true,
             ],
             'password' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
+            'email' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'unique' =>true,
+            ],
             'level' => [
-                'type' => 'INT',
-                'constraint' => 11,
-                'unsigned' => true
+                'type' => 'VARCHAR',
+                'constraint' => 30,
             ],
             'nama_user' => [
                 'type' => 'VARCHAR',
@@ -35,6 +40,7 @@ class CreateTableUser extends Migration
             'no_ktp' => [
                 'type' => 'VARCHAR',
                 'constraint' => 16,
+                'unique' => true,
             ],
             'alamat' => [
                 'type' => 'TEXT',
@@ -44,6 +50,10 @@ class CreateTableUser extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 15,
                 'null' => true,
+            ],
+            'token' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ],
             'created_at' => [
                 'type'  => 'DATETIME',
@@ -57,6 +67,7 @@ class CreateTableUser extends Migration
                 'type'  => 'DATETIME',
                 'null' => true,
             ],
+            'last_login timestamp default now()'
         ]);
 
         $this->forge->addKey('id', true, true);

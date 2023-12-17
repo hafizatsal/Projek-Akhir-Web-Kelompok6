@@ -13,6 +13,17 @@ class CreateTableDokter extends Migration
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,
+                'auto_increment' => true
+            ],
+            'nip' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'unique' => true,
+            ],
+            'sip' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'unique' => true,
             ],
             'nama_dokter' => [
                 'type' => 'VARCHAR',

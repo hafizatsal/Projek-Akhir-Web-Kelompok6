@@ -8,12 +8,14 @@ class UserModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'user';
-    protected $primaryKey       = 'id';
+    // protected $primaryKey       = 'id';
+    protected $primaryKey       = 'email';
+
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['username', 'password','level', 'nama_user', 'no_ktp', 'alamat', 'no_tlp'];
+    protected $allowedFields    = ['username', 'password','email','level', 'nama_user', 'no_ktp', 'alamat', 'no_tlp', 'token'];
 
     // Dates
     protected $useTimestamps = true;
@@ -38,6 +40,23 @@ class UserModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+     public function getAkun($parameter){
+        $builder =$this->table($this->table);
+        $builder->where('username=', $parameter);
+        $builder->orWhere('email=', $parameter);
+        $query = $builder->get();
+        return $query->getRowArray();
+    }
+
+    public function updateAkun($data){
+        $builder = $this->table($this->table);
+        if($builder->save($data)){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     public function saveUser ($data){
         $this->insert($data);
