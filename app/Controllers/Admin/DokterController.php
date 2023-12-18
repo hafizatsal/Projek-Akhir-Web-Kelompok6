@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Models\DokterModel;
 use App\Controllers\BaseController;
@@ -31,31 +31,66 @@ class DokterController extends BaseController
     }    
 
     public function store()
-    {
-        $this->dokterModel->saveDokter([
-            'nip' => $this->request->getVar('nip'),
-            'sip' => $this->request->getVar('sip'),
-            'nama_dokter' => $this->request->getVar('nama_dokter'),
-            'spesialis' => $this->request->getVar('spesialis'),
-            'no_tlp' => $this->request->getVar('no_tlp'),
-            'alamat' => $this->request->getVar('alamat'),
-        ]);
+    {   
+
+
+            $this->dokterModel->saveDokter([
+                'nip' => $this->request->getVar('nip'),
+                'sip' => $this->request->getVar('sip'),
+                'nama_dokter' => $this->request->getVar('nama_dokter'),
+                'spesialis' => $this->request->getVar('spesialis'),
+                'no_tlp' => $this->request->getVar('no_tlp'),
+                'alamat' => $this->request->getVar('alamat'),
+            ]);
+        
+        
         return redirect()->to('admin/data_dokter');
     }
 
     // Add the missing closing brace for the class here
 
 
-    // public function edit($id)
-    // {
-    //     $user = $this->dokterModel->getDokter($id);
+    public function tambah_dokter()
+    {
+        
+    
+        $data = [
+            'users' => $this->dokterModel->getDokter(),
+        ];
+    
+        $data['templateJudul'] = 'Tambah Dokter';
+        $data['templateAtas'] = "Dokter";
+    
+        echo view('admin/header', $data);
+        echo view('admin/crud/tambah_dokter', $data);
+        echo view('admin/footer', $data);
+    }
 
-    //     $data = [
-    //         'user' => $user,
-    //     ];
+    public function detail($id)
+    {
+        $user = $this->dokterModel->getDokter($id);
+        $data = [
+            'user' =>$user,
+        ];
+        $data['templateJudul'] = 'Detail Dokter';
+        $data['templateAtas'] = "Dokter";
+        echo view ('admin/header', $data);
+        echo view ('admin/crud/detail_dokter', $data);
+        echo view ('admin/footer', $data);
+    }
 
-    //     return view('edit_user', $data);
-    // }
+    public function edit_dokter($id)
+    {
+        $user = $this->dokterModel->getDokter($id);
+        $data = [
+            'user' =>$user,
+        ];
+        $data['templateJudul'] = 'Edit Dokter';
+        $data['templateAtas'] = "Dokter";
+        echo view ('admin/header', $data);
+        echo view ('admin/crud/edit_dokter', $data);
+        echo view ('admin/footer', $data);
+    }
 
     public function update_dokter($id)
     {
