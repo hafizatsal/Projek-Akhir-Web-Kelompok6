@@ -6,7 +6,7 @@
                         <h1 class="mt-1"><?php echo $templateAtas?></h1>
                         </div>
                         <div class="mt-2 mr-1">
-                        <a href="<?php echo site_url('admin/tambah_dokter')?>" class="btn btn-success ms-auto me-3 me-lg-4 p-2" 
+                        <a href="<?php echo site_url('resepsionis/tambah_dokter')?>" class="btn btn-success ms-auto me-3 me-lg-4 p-2" 
                         
                          ><i class="bi bi-person-plus"></i>&nbsp;<?php echo $templateAtas?></a>
                         </div>
@@ -49,12 +49,12 @@
                                             <td><?= $user['nama_dokter'] ?></td>
                                             <td><?= $user['spesialis'] ?></td>
                                             <td style="text-align: center;">
-                                                <a href="<?php echo site_url('admin/detail/'. $user['id'])?>" class="btn btn-primary  "><i class="bi bi-eye"></i></a>
+                                                <a href="<?php echo site_url('resepsionis/detail/'. $user['id'])?>" class="btn btn-primary  "><i class="bi bi-eye"></i></a>
                                                 
-                                                <a href="<?php echo site_url('admin/edit/'. $user['id'])?>"  class="btn btn-warning  " data-bs-toggle="modal" 
+                                                <a href="<?php echo site_url('resepsionis/edit/'. $user['id'])?>"  class="btn btn-warning  " data-bs-toggle="modal" 
                                                 data-bs-target="#editDokter<?php echo $user['id']?>" ><i class="bi bi-pencil-square"></i></a>
 
-                                                <form action="<?= site_url('admin/delete/' . $user['id']) ?>" method="post" style="display: inline-block;">
+                                                <form action="<?= site_url('resepsionis/delete/' . $user['id']) ?>" method="post" style="display: inline-block;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <?= csrf_field() ?>
                                                     <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i></button>

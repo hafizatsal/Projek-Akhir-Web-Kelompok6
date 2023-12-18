@@ -4,18 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class JadwalModel extends Model
+class PoliModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'jadwal';
+    protected $table            = 'poli';
     // protected $primaryKey       = 'id';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'id_poli';
 
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['hari', 'tanggal','jam_selesai','jam_mulai','id_poli','id_dokter'];
+    protected $allowedFields    = ['kode_poli', 'nama_poli'];
 
     // Dates
     protected $useTimestamps = true;
@@ -41,31 +41,21 @@ class JadwalModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
- 
-    public function saveJadwal ($data){
+
+    public function savePoli ($data){
         $this->insert($data);
     }
-
-    public function getJadwal ($id = null){
+    public function getPoli($id = null){
         if($id != null){
-            return $this->select('jadwal.*, poli.nama_poli, dokter.nama_dokter')
-            ->join('poli', 'poli.id_poli=jadwal.id_poli')
-            ->join('dokter', 'dokter.id=jadwal.id_dokter')
-            ->find($id);
+            return $this->find($id);
         }
-        return $this->select('jadwal.*, poli.nama_poli, dokter.nama_dokter')
-        ->join('poli', 'poli.id_poli=jadwal.id_poli')
-        ->join('dokter', 'dokter.id=jadwal.id_dokter')
-        ->find();    
+        return $this->findAll();
     }
-
-    
-
-    public function updateJadwal ($data, $id){
+    public function updatePoli($data, $id){
         return $this->update($id, $data);
     }
 
-    public function deleteJadwal ($id){
+    public function deletePoli($id){
 
         return $this->delete($id);
 

@@ -55,25 +55,44 @@
             
             
             <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('resepsionis/beranda')?>">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Daftar Antrian</span>
+            <i class="bi bi-person-video2" style="color: white;"></i>                    
+            <span>Beranda</span>
                 </a>
              
             </li>
-
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+            <a class="nav-link" href="">
+            <i class="bi bi-person-video2" style="color: white;"></i>                    
+            <span>Daftar Antrian</span>
+                </a>
+             
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('resepsionis/poli_resepsionis')?>">
+                <i class="fas fa-fw fa-chart-area" style="color: white;"></i>
+                <span>Manajemen Poli</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('resepsionis/data_dokter')?>">
+                    <i class="fas fa-fw fa-chart-area" style="color: white;"></i>
+                    <span>Daftar Dokter</span></a>
+            </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('resepsionis/jadwal_praktek')?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link" href="<?php echo site_url('resepsionis/jadwal_dokter')?>">
+                    <i class="fas fa-fw fa-chart-area" style="color: white;"></i>
                     <span>Jadwal Dokter</span></a>
             </li>
-
-          
-
+            
+         
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-chart-area" style="color: white;"></i>
+                    <span>Laporan</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
