@@ -16,7 +16,7 @@
                   <input type="text" name="nama" id="nama" class="form-control" value="<?php echo session()->get('akun_nama_user')?>" readonly>
                 </div>
                 <div class="col-md-6">
-                  <label for="jenis_kelamin" class="col-form-label">Nama poli <small style="color: red;">*</small></label>
+                  <label for="jenis_kelamin" class="col-form-label">Jenis Kelamin <small style="color: red;">*</small></label>
                   <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
                     <option value="laki-laki">Laki-laki</option>
                     <option value="perempuan">Perempuan</option>
@@ -43,12 +43,12 @@
               </div>
               <div class="row g-3">
               <div class="col-md-3">
-              <label for="alamat" class="col-form-label">Jenis Kelamin</label>
-                  <input type="text" name="alamat" id="alamat" class="form-control">
+              <label for="poli" class="col-form-label">Nama Poli</label>
+                  <input type="text" name="poli" id="poli" class="form-control">
                 </div>
                 <div class="col-md-3">
-                  <label for="alamat" class="col-form-label">Usia</label>
-                  <input type="text" name="alamat" id="alamat" class="form-control">
+                  <label for="usia" class="col-form-label">Usia</label>
+                  <input type="text" name="usia" id="usia" class="form-control">
                 </div>
               
                 <div class="col-md-6">

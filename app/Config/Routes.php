@@ -1,6 +1,10 @@
 <?php
 use App\Controllers\UserController;
 use CodeIgniter\Router\RouteCollection;
+use Myth\Auth\Config\Auth as AuthConfig;
+
+// Use AuthConfig in your code
+$config = new AuthConfig();
 
 /**
  * @var RouteCollection $routes
@@ -12,7 +16,7 @@ $routes->add('puskesmas', [UserController::class, 'puskesmas']);
 $routes->group('puskesmas', function($routes) {
     $routes->add('login', 'UserController::login');
 });
-
+$routes->add('/register', 'Myth\Auth\Controllers\AuthController::register');
 $routes->add('/logout', [UserController::class, 'logout']);
 $routes->add('/lupapassword', [UserController::class, 'lupapassword']);
 $routes->add('/resetpassword', [UserController::class, 'resetpassword']);

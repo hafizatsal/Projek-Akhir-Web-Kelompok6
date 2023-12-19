@@ -100,7 +100,7 @@
                                             <a class="small" href="<?php echo site_url ("/lupapassword")?>">Forgot Password?</a>
                                         </div>
                                     <div class="text-center">
-                                    <a class="small" href="<?= site_url('/register') ?>">Create an Account!</a>
+                                        <a class="small" href="register.php">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
